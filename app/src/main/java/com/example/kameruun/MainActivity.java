@@ -18,14 +18,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         buttonPushMe = (Button) findViewById(R.id.btn_pushme);
+        buttonPushMe2 = (Button) findViewById(R.id.btn_pushme2);
+
         buttonPushMe.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 buttonPushMe.setText("ボタンが押されました");
                 imageAndroid.setImageResource(R.drawable.droid2);
+                buttonPushMe2.setText("戻すにはこちらを押してください");
 
             }
         });
         imageAndroid = (ImageView) findViewById(R.id.iv_android);
+
+        buttonPushMe2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                buttonPushMe2.setText("ボタンが押されました");
+                imageAndroid.setImageResource(R.drawable.droid1);
+                buttonPushMe.setText("戻すにはこちらを押してください");
+
+            }
+        });
     }
 }
